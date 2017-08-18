@@ -8,6 +8,7 @@
 
     <title>Stylish Portfolio - Start Bootstrap Template</title>
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -91,7 +92,7 @@
         div.panel {
             padding: 0 18px;
             display: none;
-            width: 45%;
+            width: 100%;
             border: none;
         }
 
@@ -219,11 +220,19 @@
 </head>
 <body>
 <div id="head1">
-    <div style="text-align: right; width: 100%;">
+<div style="text-align: right; width: 100%;">
+ <!--    <div style="text-align: right; width: 100%;">
         <button id="design" style="font-size:30px;cursor:pointer" onclick="openNav()">
             <i class="fa fa-book text-primary"></i>
         </button>
-    </div>
+    </div> -->
+  <button id = "right" style="font-size:30px;cursor:pointer" class="closebtn" onclick="openNav()"> 
+  <i class = "fa fa-bars"></i>
+  <!-- <div id ="menu"></div>
+  <div id ="menu"></div>
+  <div id ="menu"></div> -->
+  </button>
+</div>
 
     <div id="mySidenav" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
