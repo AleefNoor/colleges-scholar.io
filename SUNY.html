@@ -9,6 +9,7 @@
     <meta name="author" content="">
 
     <title>SUNY Colleges</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -109,7 +110,7 @@
         }
 
         div#left{
-            width: 50%;
+            width: 49%;
             height: auto;
             float: left;
             border: solid;
@@ -223,9 +224,14 @@
     
 <body>
 <div id="head1">
-    <div style="text-align: right; width: 100%;">
+
+<div style="text-align: right; width: 100%;">
+  <button id = "right" style="font-size:30px;cursor:pointer" class="closebtn" onclick="openNav()"> 
+    <i class = "fa fa-bars"></i></button>
+   <!--  <div style="text-align: right; width: 100%;">
         <button id="right" style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="fa fa-graduation-cap"></i></button>
-    </div>
+    </div> -->
+</div>
     
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
