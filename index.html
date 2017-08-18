@@ -96,10 +96,23 @@ div#table1{
 }
 
 button#design{
-   float: left;
+   float: right;
    position: absolute;
-    top: 5;
-    right: 0;
+   top: 4;
+   right: 0;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.blue {
+    position: relative; 
+   width: 100%;
+}
+
+h1 { 
+   position: absolute; 
+   bottom: 350px;
+   left: 0; 
+   width: 100%; 
 }
 
 
@@ -109,11 +122,13 @@ button#design{
 <body>
 <div id="head1">
 
-    <div id="blue" style="text-align: right; width: 100%;">
+    <div class="blue">
         <button id="design" style="font-size:30px;cursor:pointer" onclick="openNav()">
           <i class="fa fa-bars"></i>
         </button>
-    <img src="bg.jpg" style="height: 90%;"></img>
+
+    <img src="bg.jpg" style="height: 700px; width: 100%;"></img>
+    <h1><span>College Scholar<span></h1>
     </div>
 
     <div id="mySidenav" class="sidenav">
