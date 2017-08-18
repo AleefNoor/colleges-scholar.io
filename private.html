@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SUNY Colleges</title>
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Custom CSS -->
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<style>
+
+* {box-sizing:border-box}
+        body {
+            font-family: "Lato", sans-serif;
+
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover, .offcanvas a:focus{
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        @media screen and (max-height: 450px) {
+          .sidenav {padding-top: 15px;}
+          .sidenav a {font-size: 18px;}
+        }
+
+        #color {
+            background-color: transparent;
+            outline: none;
+            border: none;
+        }
+
+        button.accordion {
+            background-color: #FCF6BD;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+
+        button.accordion.active, button.accordion:hover {
+            background-color: #1C77C3; 
+            outline: none;
+
+        }
+
+        div.panel {
+            padding: 0 18px;
+            display: none;
+            width: 45%;
+            border: none;
+        }
+
+        div#right{
+            top: 0;
+            width: 49.9%;
+            height: auto;
+            float: right;
+            border: solid;
+            border-color: navy;
+            justify-content: center;
+            background-color: #C9D6EA;
+        }
+
+        div#left{
+            width: 50%;
+            height: auto;
+            float: left;
+            border: solid;
+            border-color: orange;
+            justify-content: center;
+        }
+
+        img#changes{
+            margin-left: auto;
+            display: block;
+            height: 200px; 
+            width: 200px;
+        }
+
+
+        div#head1{
+          background-image: url("h1.jpg");
+          height: 25%;
+        }
+
+        
+.mySlides {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: blue;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: white;
+  font-size: 25px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  background-color: darkblue;
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor:pointer;
+  height: 10px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: orange;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ;
+}
+
+.active, .dot:hover {
+  background-color: blue;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+    </style>
+</head>
+<body>
+<div id="head1">
+<div style="text-align: right; width: 100%;">
+<button id="right" style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="fa fa-university"></i></button>
+</div>
+
+<div id="mySidenav" class="sidenav" class = "dropdown">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <button id="color"><a href="./index.html#top">Home</a></button>
+  <button id="color"><a href="">About Us</a></button>
+  <button id="color"><a href="./index.html#about" class="dropbtn">College Info</a></button>  
+  <button id="color"><a href="#">College Process</a></button>
+  <button id="color"><a href="#">Contact</a></button>
+</div>
+
+<h1>Private Colleges in NY:</h1>
+</div>
+
+<div id="right"> 
+
+      <img src="private.png" id = "changes" style="float:right; width: 50%"></img>
+
+    <span style="float:left;width:50%; font-size: 20px; line-height: 150%">
+    <br> 
+        Private schools are also known as independent schools because they are not funded by the government. <br> This is why private schools have the right to charge their students tuition.Click on the private colleges on the left to get information on some popular private colleges.
+    <br>
+    </span>
+    <br>    
+    <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="Barnard.jpg" style="width:100%;height:299px;">
+  <div class="text"><b>Barnard College</b></div>
+</div>
+
+<div class="mySlides fade">
+  <img src="columbia.jpg" style="width:100%;height:299px;">
+  <div class="text"><b>Columbia University [IVY League]</b></div>
+</div>
+
+<div class="mySlides fade">
+  <img src="cooper_union.jpg" style="width:100%;height:299px;">
+  <div class="text"><b>Cooper Union College</b></div>
+</div>
+
+<div class="mySlides fade">
+  <img src="Cornell.jpg" style="width:100%; height:299px;">
+  <div class="text"><b>Cornell University</b></div>
+</div>
+
+<div class="mySlides fade">
+  <img src="fordham.jpg" style="width:100%;height:299px;">
+  <div class="text"><b>Fordham University</b></div>
+</div>
+
+<div class="mySlides fade">
+  <img src="NYU.JPG" style="width:100%;height:299px;">
+  <div class="text"><b>New York University</b></div>
+</div>
+
+<div class="mySlides fade">
+  <img src="RPI.jpg" style="width:100%;height:299px;">
+  <div class="text"><b>Rensselear Polytechnic Institute</b></div>
+</div>
+
+
+<div class="mySlides fade">
+  <img src="St_Johns.jpg" style="width:100%;height:299px;">
+  <div class="text"><b>St. John University</b></div>
+</div>
+
+<div class="mySlides fade">
+  <img src="syracuse.jpg" style="width:100%;height:299px;">
+  <div class="text"><b>Syracuse University</b></div>
+</div>
+
+<div class="mySlides fade">
+  <img src="Rochester.jpg" style="width:100%;height:299px">
+  <div class="text"><b>University of Rochester</b></div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+
+<div id= "dot1" style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span>  
+  <span class="dot" onclick="currentSlide(8)"></span>
+  <span class="dot" onclick="currentSlide(9)"></span> 
+  <span class="dot" onclick="currentSlide(10)"></span>   
+</div>
+</div>
+
+</div>
+
+
+<div id="left">
+
+<button class="accordion">Barnard</button>
+    <div class="panel">
+        <p> 
+            Upper West Side, Manhattan, New York <br>
+            3009 Broadway, New York, NY 10027<br>
+            Acceptance Rate: 16.7% <br>
+            Popular Majors: Social Sciences, Psychology, English Language and Literature/Letters, Visual and Performing Arts, and Biological and Biomedical Sciences <br>
+            Application Fee: $75 <br>
+            GPA: 3.90 <br>
+            SAT Critical Reading: 640/730 <br>
+                Math: 620/720 <br>
+                Average:1360 <br>
+            ACT: 28/32 <br>
+            College Home Page:<a href="https://barnard.edu/"> Click here</a> <br>
+            For more information: <a href="https://www.princetonreview.com/schools/1024049/college/barnard-college#!academics"> Princeton Review</a>
+        </p>
+    </div>
+
+<button class="accordion">Colombia</button>
+    <div class="panel">
+        <p> 
+            Upper Manhattan, New York <br>
+            116th St &#38 Broadway, New York, NY 10027<br>
+            Acceptance Rate: 6.9% <br>
+            Popular Majors: Engineering, Social Sciences Biological and Biomedical Sciences, English Language and Literature and Foreign Languages, Linguistics <br>
+            Application Fee: $85 <br>
+            GPA: 4.16 <br>
+            SAT Critical Reading: 700/790 <br>
+                Math: 710/800 <br>
+                Average: 1470-1590 <br>
+            ACT: 32/35 <br>
+            College Home Page:<a href="http://www.columbia.edu/"> Click here</a> <br>
+            For more information: <a href="https://www.princetonreview.com/schools/1023497/college/columbia-university"> Princeton Review</a> 
+        </p>
+    </div>
+
+<button class="accordion">Cooper Union</button>
+    <div class="panel">
+        <p> 
+            East Village, Astor Place <br>
+            30 Cooper Sq, New York, NY 10003<br>
+            Acceptance Rate: 13% <br>
+            Popular Majors: Engineering and Visual and Performing Arts <br>
+            Application Fee: $75 <br>
+            GPA: 3.5 <br>
+            SAT Critical Reading:  <br>
+                Math:  <br>
+                Average: 1310-1530 <br>
+            ACT:  <br>
+            College Home Page:<a href="https://cooper.edu/welcome"> Click here</a> <br>
+            For more information: <a href="https://www.princetonreview.com/schools/1023885/college/cooper-union-for-advancement-science-art"> Princeton Review</a> 
+        </p>
+    </div> 
+
+<button class="accordion">Cornell</button>
+    <div class="panel">
+        <p> 
+            Ithaca, New York 14850 <br>
+            Acceptance Rate: 14.1% <br>
+            Popular Majors: Engineering, Biological and Biomedical Sciences, Business, Management, Marketing, and Social Sciences <br>
+            Application Fee: $80 <br>
+            GPA: 4.04 <br>
+            SAT Critical Reading: 700/790 <br>
+                Math: 710/790 <br>
+                Average:1480 <br>
+            ACT: 30/34 <br>
+            College Home Page:<a href="https://www.cornell.edu/"> Click here</a> <br>
+            For more information: <a href="https://www.princetonreview.com/schools/1023589/college/cornell-university"> Princeton Review</a>
+        </p>
+    </div>
+
+<button class="accordion">Fordham</button>
+    <div class="panel">
+        <p> 
+            Bronx, Rose Hill &#38 Manhattan, Lincoln Center <br>
+            Acceptance Rate: 44% <br>
+            Popular Majors: Business Administration and Management, Economics, Finance, Psychology <br>
+            Application Fee: $70 <br>
+            GPA: 3.64 <br>
+            SAT Critical Reading: <br>
+                Math: <br>
+                Average: 1260-1430 <br>
+            ACT: 26/30 <br>
+            College Home Page:<a href="https://www.fordham.edu/"> Click here</a> <br>
+            For more information: <a href="https://www.princetonreview.com/schools/1023254/college/fordham-university"> Princeton Review</a>
+        </p>
+    </div>
+
+<button class="accordion">New York University (NYC)</button>
+    <div class="panel">
+        <p> 
+            New York, NY 10003 <br>
+            Acceptance Rate: 33% <br>
+            Popular Majors: Visual and Performing Arts, Social Sciences, Business, Management, Marketing, Liberal Arts and Sciences, Humanities <br>
+            Application Fee: $80 <br>
+            GPA: 3.70 <br>
+            SAT Critical Reading: 610/710 <br>
+                Math: 630/740 <br>
+                Average: 1345 <br>
+            ACT: 28/32 <br>
+            College Home Page:<a href="https://www.nyu.edu/"> Click here</a> <br>
+            For more information: <a href="https://www.princetonreview.com/schools/1022976/college/new-york-university"> Princeton Review</a>
+        </p>
+    </div>
+
+<button class="accordion">Rensselaer Polytechnic Institute (RPI)</button>
+    <div class="panel">
+        <p> 
+            110 8th St, Troy, NY 12180<br>
+            Acceptance Rate: 42% <br>
+            Popular Majors: Mechanical Engineering, Computer Science, Electrical Engineering, Business Administration &#38 Management <br>
+            Application Fee: $70 <br>
+            GPA: 3.87 <br>
+            SAT Critical Reading: 660/760 <br>
+                Math: 700/780 <br>
+                Average: 1360-1540 <br>
+            ACT: 27/32 <br>
+            College Home Page:<a href="https://www.rpi.edu/"> Click here</a> <br>
+            For more information <a href="https://www.princetonreview.com/schools/1023987/college/rensselaer-polytechnic-institute"> Princeton Review</a> 
+        </p>
+    </div>
+
+<button class="accordion">St. John University</button>
+    <div class="panel">
+        <p>
+            8000 Utopia Pkwy, Jamaica, NY 11439<br>
+            Acceptance Rate: 62.5% <br>
+            Popular Majors: Business, Management, Marketing, Law Enforcement, Related Protective Services, and Biological and Biomedical Sciences <br>
+            Application Fee: $50 <br>
+            GPA: 3.49 <br>
+            SAT Critical Reading: 520/620 <br>
+                Math: 510/570 <br>
+                Average: 1150 <br>
+            ACT: 22/28 <br>
+            College Home Page:<a href="www.stjohns.edu/"> Click here</a> <br>
+            For more information: <a href="https://www.princetonreview.com/schools/1024150/college/st-johns-university-ny"> Princeton Review</a> 
+        </p>
+    </div>
+
+<button class="accordion">Syracuse</button>
+    <div class="panel">
+        <p> 
+            Syracuse, New York <br>
+            Acceptance Rate: 48% <br>
+            Popular Majors: Business, Marketing, Social Sciences, Performing Arts and Engineering <br>
+            Application Fee: $75 <br>
+            GPA: 3.6 <br>
+            SAT Critical Reading: 590/680 <br>
+                Math: 580/690 <br>
+                Average: 1170-1370 <br>
+            ACT: 24/29 <br>
+            College Home Page:<a href="https://www.syracuse.edu/"> Click here</a> <br>
+            For more information: <a href="https://www.princetonreview.com/schools/1024060/college/syracuse-university"> Princeton Review</a> 
+        </p>
+    </div>
+
+<button class="accordion">University of Rochester</button>
+    <div class="panel">
+        <p> Rochester, New York,13210 <br>
+            Acceptance Rate: 34% <br>
+            Popular Majors: Social Sciences, Biological and Biomedical Sciences, Engineering, and Psychology <br>
+            Application Fee: $50 <br>
+            GPA: 3.80 <br>
+            SAT Critical Reading: 600/710 <br>
+                Math: 640/760 <br>
+                Average: 1348 <br>
+            ACT: 29/33 <br>
+            College Home Page:<a href="https://www.rochester.edu/"> Click here</a> <br>
+            For more information: <a href="https://www.princetonreview.com/schools/1024047/college/university-rochester"> Princeton Review</a>
+        </p>
+    </div>
+
+</div>
+
+   <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].onclick = function(){
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        }
+    }
+
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+
+    </script>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+ <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/stylish-portfolio.js"></script>
+
+
+</body>
+</html>

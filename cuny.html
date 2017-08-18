@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Stylish Portfolio - Start Bootstrap Template</title>
+
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Custom CSS -->
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <style>
+        * {box-sizing:border-box}
+        body {
+            font-family: "Lato", sans-serif;
+
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover, .offcanvas a:focus{
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        @media screen and (max-height: 450px) {
+          .sidenav {padding-top: 15px;}
+          .sidenav a {font-size: 18px;}
+        }
+
+        #color {
+            background-color: transparent;
+            outline: none;
+            border: none;
+        }
+
+        button.accordion {
+            background-color: #FCF6BD;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+
+        button.accordion.active, button.accordion:hover {
+            background-color: #1C77C3; 
+            outline: none;
+
+        }
+
+        div.panel {
+            padding: 0 18px;
+            display: none;
+            width: 45%;
+            border: none;
+        }
+
+        div#right{
+            width: 49.9%;
+            height: auto;
+            float: right;
+            border: solid;
+            border-color: navy;
+            justify-content: center;
+            background-color: #C9D6EA;
+        }
+
+        div#left{
+            width: 50%;
+            height: auto;
+            float: left;
+            border: solid;
+            border-color: orange;
+            justify-content: center;
+        }
+
+        img#changes{
+            margin-left: auto;
+            display: block;
+            height: 200px; 
+            width: 200px;
+        }
+
+
+        div#head1{
+          background-image: url("h1.jpg");
+          height: 25%;
+        }
+
+        
+.mySlides {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: blue;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: white;
+  font-size: 25px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  background-color: darkblue;
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor:pointer;
+  height: 10px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: orange;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ;
+}
+
+.active, .dot:hover {
+  background-color: blue;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+    </style>
+</head>
+<body>
+<div id="head1">
+    <div style="text-align: right; width: 100%;">
+        <button id="design" style="font-size:30px;cursor:pointer" onclick="openNav()">
+            <i class="fa fa-book text-primary"></i>
+        </button>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <button id="color"><a href="./index.html#top">Home</a></button>
+      <button id="color"><a href="">About Us</a></button>
+      <div class="dropdown">
+        <button id="color"><a href="./index.html#about" class="dropbtn">College Info</a></button>
+      </div>
+      <button id="color"><a href="#">College Process</a></button>
+      <button id="color"><a href="#">Contact</a></button>
+    </div>
+
+
+    <h1>CUNY [City University of New York]</h1>
+  </div>
+
+<div id="right"> 
+        <img id = "changes" src ="c.jpeg" style="float:right;width:50%"></img>
+
+        <span style="float:left;width:50%; font-size: 20px; line-height: 150%"> 
+            CUNY is the public university system of New York City. If you love living in a city enviornment then these colleges are perfect for you. On the left are the top 10 CUNYs listed in alphabetical order. Click on the college(s) to learn more.
+
+ </span>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="baruch_College.png" style="width:100%;height:299px;">
+  <div class="text"><b>Baruch College</b></div>
+</div>
+
+<div class="mySlides fade">
+  <img src="brooklyn.jpg" style="width:100%;height:299px;">
+  <div class="text"><b>Brooklyn College</b></div>
+</div>
+
+<div class="mySlides fade">
+  <img src="ccny.jpg" style="width:100%;height:299px;">
+  <div class="text"><b>City College</b></div>
+</div>
+
+<div class="mySlides fade">
+  <img src="city_tech.jpg" style="width:100%; height:299px;">
+  <div class="text"><b>City Tech</b></div>
+</div>
+
+<div class="mySlides fade">
+  <img src="staten_island.jpg" style="width:100%;height:299px;">
+  <div class="text"><b>College of Staten Island</b></div>
+</div>
+
+<div class="mySlides fade">
+  <img src="hunter.jpg" style="width:100%;height:299px;">
+  <div class="text"><b>Hunter College</b></div>
+</div>
+
+<div class="mySlides fade">
+  <img src="John_Jay.jpg" style="width:100%;height:299px;">
+  <div class="text"><b>John Jay</b></div>
+</div>
+
+
+<div class="mySlides fade">
+  <img src="lehman.jpg" style="width:100%;height:299px;">
+  <div class="text"><b>Lehman College</b></div>
+</div>
+
+<div class="mySlides fade">
+  <img src="Medgar.jpg" style="width:100%;height:299px;">
+  <div class="text"><b>Medgar Evers College</b></div>
+</div>
+
+<div class="mySlides fade">
+  <img src="queens.jpg" style="width:100%;height:299px">
+  <div class="text"><b>Queens College</b></div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+
+<div id= "dot1" style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span>  
+  <span class="dot" onclick="currentSlide(8)"></span>
+  <span class="dot" onclick="currentSlide(9)"></span> 
+  <span class="dot" onclick="currentSlide(10)"></span>   
+</div>
+</div>
+
+<div id = "left">
+    <button class="accordion">Baruch College</button>
+    <div class="panel">
+      <p>
+        Midtown, Manhattan <br>
+        Acceptance Rate: 32% <br>
+        Popular Majors: Accounting, Business Administration, Investments and Securities, Sales and Marketing. <br>
+        Application Fee: $65 <br>
+        GPA: 3.30  <br>
+        SAT Critical Reading: 540/640 <br>
+        Math: 600/690  <br>
+        Average: 1170-1280  <br>
+        ACT: 25-29 <br>
+        College Homepage 
+        <a href="http://www.brooklyn.cuny.edu/web/home.php"> Click Here.</a><br>
+        For more reviews and informarion 
+        <a href="https://www.usnews.com/best-colleges/baruch-cuny-4766">US News Review</a>
+      </p>
+    </div>
+
+    <button class="accordion">Brooklyn College</button>
+    <div class="panel">
+        <p>Brooklyn
+            Acceptance Rate: 37% <br>
+            Popular Majors: Accounting, Biology, Business Administration and Management, Teacher Education, Psychology<br>
+            Application Fee: $65<br>
+            GPA: 3.31<br>
+            SAT Critical Reading: 490/580 <br>
+            Math: 530/630 <br>
+            Average: 1050-1250<br>
+            ACT: N/A<br>
+            College Homepage 
+            <a href="http://www.baruch.cuny.edu/"> Click Here.</a><br>
+            For more reviews and information 
+            <a href="https://www.usnews.com/best-colleges/brooklyn-college-2687">US News Review</a>
+        </p>
+    </div>
+
+    <button class="accordion">CCNY (City College of New York)</button>
+    <div class="panel">
+        <p>
+            Manhattan (Harlem&#39s Hamilton Heights)<br>
+            Acceptance Rate: 43% <br>
+            Popular Majors: Psychology, Engineering, Social Science, Performing Arts, Biological and Biomedical Sciences <br>
+            Application Fee: $65<br>
+            GPA: 3.40<br>
+            SAT Critical Reading: 470/600<br>
+                Math: 530/650<br>
+                Average: 1040-1290<br>
+            ACT: N/A<br>
+            College Homepage <a href="https://www.ccny.cuny.edu/"> Click Here.</a><br>
+            For more reviews and information <a href="https://www.unigo.com/colleges/cuny-city-college">Niche Review</a>
+        </p>
+    </div> 
+
+    <button class="accordion">City Tech (New York City College of Technology)</button>
+    <div class="panel">
+      <p>
+        Jay Street, Brooklyn  <br> 
+        Acceptance Rate: 74%  <br> 
+        Popular Majors: Architectural Technology, Community Organization and Advocacy, Computer Engineering Technology, Hospitality Administration, Information Science <br> 
+        Application Fee: $65 <br> 
+        GPA: 2.95 <br> 
+        SAT Critical Reading: SAT SCORES NOT REQUIRED <br> 
+            Math:... <br>
+            Average: 820-1020 <br> 
+        ACT:14  <br> 
+        College Homepage <a href="https://www.csi.cuny.edu/"> Click Here.</a><br>
+        For more reviews and information <a href="https://www.niche.com/colleges/cuny-new-york-city-college-of-technology/">Niche Review.</a>
+      </p>
+    </div>
+
+    <button class="accordion">College of Staten Island </button>
+    <div class="panel">
+        <p> 
+            Central Staten Island <br>
+            Acceptance Rate: 98% <br>
+            Popular Majors: Accounting, Business, Economics, English, Liberal Arts, Psychology, Social Sciences<br>
+            Application Fee: $65<br>
+            GPA: 3.06<br>
+            SAT Critical Reading: 480/590<br>
+                Math: 510/580<br>
+                Average: 990-1170<br>
+            ACT: N/A<br>
+            College Homepage <a href="http://www.citytech.cuny.edu/"> Click Here.</a><br>
+            For more reviews and information <a href="https://www.niche.com/colleges/cuny-college-of-staten-island/">Niche Review.</a>
+        </p>
+    </div>
+
+    <button class="accordion">Hunter College </button>
+    <div class="panel">
+        <p>
+            Manhattan&#39s Upper East Side <br> 
+            Acceptance Rate: 39% <br> 
+            Popular Majors: Accounting, Communication Studies, Economics, English, Nursing, Political Science, Psychology, Sociology<br> 
+            Application Fee: $125 <br> 
+            GPA: 3.20 <br> 
+            SAT Critical Reading: 520/620<br> 
+                Math: 550/640<br> 
+                Average: 1130-1330<br> 
+            ACT: N/A<br> 
+            College Homepage <a href="https://www.hunter.cuny.edu/"> Click Here.</a><br>
+            For more reviews and information <a href="https://www.niche.com/colleges/cuny-hunter-college/">Niche Review.</a>
+        </p>
+    </div>
+
+    <button class="accordion">John Jay College of Criminal Justice</button>
+    <div class="panel">
+      <p>
+        Midtown Manhattan <br> 
+        Acceptance Rate: 37% <br> 
+        Popular Majors: Criminal Justice, Criminology, Forensic Psychology, Legal Studies, Political Science<br> 
+        Application Fee: $125<br> 
+        GPA: 2.84<br> 
+        SAT Critical Reading: 430/520<br> 
+            Math: 460/540<br> 
+            Average: 940-1120<br> 
+        ACT: N/A<br> 
+        College Homepage <a href="http://www.jjay.cuny.edu/"> Click Here.</a><br>
+        For more reviews and information <a href="https://www.niche.com/colleges/cuny-john-jay-college-of-criminal-justice/">Niche Review.</a>
+      </p>
+    </div>
+
+    <button class="accordion">Lehman College </button>
+    <div class="panel">
+        <p>Bronx <br> 
+            Acceptance Rate: 30%<br> 
+            Popular Majors: Accounting, Business Administration, Nursing, Psychology, Social Work, Sociology, Speech Pathology and Audiology<br> 
+            Application Fee: $125<br> 
+            GPA: 3.17<br> 
+            SAT Critical Reading: 460/550<br> 
+                Math: 480/560<br> 
+                Average: 960-1120<br> 
+            ACT: N/A<br> 
+            College Homepage <a href="http://www.lehman.cuny.edu/"> Click Here.</a><br>
+            For more reviews and information <a href="https://www.niche.com/colleges/cuny-lehman-college/">Niche Review.</a>
+        </p>
+    </div>
+
+    <button class="accordion">Medgar Evers College</button>
+    <div class="panel">
+        <p>
+            Central Brooklyn <br> 
+            Acceptance Rate: 99%<br> 
+            Popular Majors: Accounting, Biology, Business, Liberal Arts, Nursing, Psychology <br> 
+            Application Fee: $65<br> 
+            GPA: 2.85<br> 
+            SAT Critical Reading: SAT SCORES NOT REQUIRED <br> 
+                Math: N/A<br> 
+                Average: 780-960<br> 
+            ACT: N/A<br> 
+            College Homepage <a href="http://www.mec.cuny.edu/"> Click Here.</a><br>
+            For more reviews and information <a href="https://www.niche.com/colleges/cuny-medgar-evers-college/">Niche Review.</a>
+        </p>
+    </div>
+
+    <button class="accordion">Queens College</button>
+    <div class="panel">
+        <p>Flushing, Queens <br> 
+            Acceptance Rate: 40%<br> 
+            Popular Majors: Accounting, Communication Studies, Economics, Elementary Education, English, Finance, History, Political Science, Psychology, Sociology<br> 
+            Application Fee: $65<br> 
+            GPA: 3.6<br> 
+            SAT Critical Reading: 490/580<br> 
+                Math: 530/620<br> 
+                Average: 1090-1270<br> 
+            ACT: N/A<br> 
+            College Homepage <a href="http://www.qc.cuny.edu/Pages/home.aspx"> Click Here.</a><br>
+            For more reviews and information <a href="https://www.niche.com/colleges/cuny-queens-college/">Niche Review.</a>
+        </p>
+    </div>
+
+<div>
+
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].onclick = function(){
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        }
+    }
+
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+
+    </script>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+ <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/stylish-portfolio.js"></script>
+
+
+</body>
+</html>

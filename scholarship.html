@@ -1,0 +1,164 @@
+<html>
+<head>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Stylish Portfolio - Start Bootstrap Template</title>
+
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Custom CSS -->
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+	<style>
+		.sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover, .offcanvas a:focus{
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        @media screen and (max-height: 450px) {
+          .sidenav {padding-top: 15px;}
+          .sidenav a {font-size: 18px;}
+        }
+
+        #color {
+            background-color: transparent;
+            outline: none;
+            border: none;
+        }
+
+    	div#center{
+            width: 50%;
+            height: auto;
+            margin-left:auto;
+  			margin-right:auto;
+            border: solid;
+            border-color: orange;
+            justify-content: center;
+            background-color: white;
+        }
+
+      /*  div#right {
+        	width:25%;
+        	height:100%;
+        	float: right;
+        }
+
+        div#left{
+        	width:25%;
+        	height:100%;
+        	float:left;
+        }*/
+
+        body{
+        	background-image:url(money.jpg);
+        }
+	</style>
+
+</head>
+
+<body>
+
+	<div id="head1">
+		<div style="text-align: right; width: 100%;"> 
+			<button id="right" style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="fa fa-paper-plane-o"></i></button>
+		</div>
+	</div>
+
+	<div id="mySidenav" class="sidenav" class = "dropdown">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	  <button id="color"><a href="./index.html#top">Home</a></button>
+	  <button id="color"><a href="">About Us</a></button>
+	  <button id="color"><a href="./index.html#about" class="dropbtn">College Info</a></button>  
+	  <button id="color"><a href="#">College Process</a></button>
+	  <button id="color"><a href="#">Contact</a></button>
+	</div>
+
+	<div id =center style="background-color:#FCF6BD">
+		<h1 align="center">Scholarships</h1>
+	</div>
+
+	<div id=center style="background-color:#FCF6BD">
+		<ul> 
+			<li>Alice T Schafer Mathematics Prize</li> 
+				<a href="https://sites.google.com/site/awmmath/programs/schafer-prize">https://sites.google.com/site/awmmath/programs/schafer-prize</a>
+
+			<li>Coca-Cola Scholarship</li>
+				<a href="http://www.coca-colascholarsfoundation.org/">http://www.coca-colascholarsfoundation.org/</a>
+
+			<li>Dell Scholars Program</li>
+				<a href="https://www.dellscholars.org/scholarship/criteria/">https://www.dellscholars.org/scholarship/criteria/</a>
+
+			<li>Gates Millennium Scholars</li>
+				<a href="http://www.gmsp.org/gates-millennium-scholars-program/">http://www.gmsp.org/gates-millennium-scholars-program/</a>
+
+			<li>Girl Scouts of the USA</li>
+				<a href="http://www.girlscouts.org/en/our-program/scholarships.html">http://www.girlscouts.org/en/our-program/scholarships.html</a>
+			
+			<li>JP Morgan Chase &#38 CO.</li>
+				<a href="https://careers.jpmorgan.com/careers/programs/smart-start">https://careers.jpmorgan.com/careers/programs/smart-start</a>
+			
+			<li>Society of Women Engineers</li>
+				<a href= "http://societyofwomenengineers.swe.org/scholarships">http://societyofwomenengineers.swe.org/scholarships</a>
+
+			<li>QuestBridge</li>
+				<a href="https://www.questbridge.org/high-school-students/national-college-match/scholarship-details">https://www.questbridge.org/high-school-students/national-college-match/scholarship-details</a>
+
+		</ul>
+
+	</div>
+
+
+
+</body>
+
+
+<script>
+	
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+
+
+</script>
+
+</html>

@@ -1,0 +1,565 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SUNY Colleges</title>
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Custom CSS -->
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<style>
+
+* {box-sizing:border-box}
+        body {
+            font-family: "Lato", sans-serif;
+
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover, .offcanvas a:focus{
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        @media screen and (max-height: 450px) {
+          .sidenav {padding-top: 15px;}
+          .sidenav a {font-size: 18px;}
+        }
+
+        #color {
+            background-color: transparent;
+            outline: none;
+            border: none;
+        }
+
+        button.accordion {
+            background-color: #FCF6BD;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+
+        button.accordion.active, button.accordion:hover {
+            background-color: #1C77C3; 
+            outline: none;
+
+        }
+
+        div.panel {
+            padding: 0 18px;
+            display: none;
+            width: 45%;
+            border: none;
+        }
+
+        div#right{
+            top: 0;
+            width: 49.9%;
+            height: auto;
+            float: right;
+            border: solid;
+            border-color: navy;
+            justify-content: center;
+            background-color: #C9D6EA;
+        }
+
+        div#left{
+            width: 50%;
+            height: auto;
+            float: left;
+            border: solid;
+            border-color: orange;
+            justify-content: center;
+        }
+
+        img#changes{
+            margin-left: auto;
+            display: block;
+            height: 200px; 
+            width: 200px;
+        }
+
+
+        div#head1{
+          background-image: url("h1.jpg");
+          height: 25%;
+        }
+
+        
+.mySlides {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: blue;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: white;
+  font-size: 25px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  background-color: darkblue;
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor:pointer;
+  height: 10px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: orange;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ;
+}
+
+.active, .dot:hover {
+  background-color: blue;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+    </style>
+</head>
+    
+<body>
+<div id="head1">
+    <div style="text-align: right; width: 100%;">
+        <button id="right" style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="fa fa-graduation-cap"></i></button>
+    </div>
+    
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <button id="color"><a href="./index.html#top">Home</a></button>
+  <button id="color"><a href="">About Us</a></button>
+  <div class="dropdown">
+  <button id="color"><a href="./index.html#about" class="dropbtn">College Info</a></button>
+  </div>
+  <button id="color"><a href="#">College Process</a></button>
+  <button id="color"><a href="#">Contact</a></button>
+</div>
+
+
+<h2> SUNY Colleges [State University of New York]</h2>
+</div>
+
+<div id="right"> 
+    <span style="float:left; width:50%;font-size: 20px">
+        <br><br>
+        SUNY is the state university of New York City. Most of the SUNY campuses are in rural areas 
+        in upstate New York. If you want to be away from your parents or the city then this is the perfect 
+        place for you. 
+    </span>
+
+    <img id = "changes" src = "suny.png" style="float:right; width: 50%;"></img>
+     <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="buffalo_state.jpg" style="width:100%;height:299px;">
+  <div class="text"><b>Buffalo Sate University</b></div>
+</div>
+
+<div class="mySlides fade">
+  <img src="corning.jpg" style="width:100%;height:299px;">
+  <div class="text"><b>Corning Community College</b></div>
+</div>
+
+<div class="mySlides fade">
+  <img src="empire-state.jpg" style="width:100%;height:299px;">
+  <div class="text"><b>Empire State College</b></div>
+</div>
+
+<div class="mySlides fade">
+  <img src="ESF.jpg" style="width:100%;height:299px;">
+  <div class="text"><b>Environmental Science and Forestry College.</b></div>
+</div>
+
+<div class="mySlides fade">
+  <img src="Fashion_Institute.png" style="width:100%; height:299px;">
+  <div class="text"><b>Fashion Institute of Technology</b></div>
+</div>
+
+<div class="mySlides fade">
+  <img src="oswego.jpg" style="width:100%;height:299px;">
+  <div class="text"><b>Oswego</b></div>
+</div>
+
+<div class="mySlides fade">
+  <img src="stony_brook.jpg" style="width:100%;height:299px;">
+  <div class="text"><b>Stony Brook University</b></div>
+</div>
+
+<div class="mySlides fade">
+  <img src="Optometry.jpg" style="width:100%;height:299px;">
+  <div class="text"><b>College of Optometry</b></div>
+</div>
+
+
+<div class="mySlides fade">
+  <img src="maritime.jpg" style="width:100%;height:299px;">
+  <div class="text"><b>Marytime College</b></div>
+</div>
+
+<div class="mySlides fade">
+  <img src="westchster.gif" style="width:100%;height:299px">
+  <div class="text"><b>Westchester Community College</b></div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+
+<div id= "dot1" style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span>  
+  <span class="dot" onclick="currentSlide(8)"></span>
+  <span class="dot" onclick="currentSlide(9)"></span> 
+  <span class="dot" onclick="currentSlide(10)"></span>   
+</div>
+</div>
+
+</div>
+
+</div>
+
+<div id="left" style="float:left; width:50%;";>
+<button class="accordion">Buffalo State</button>
+    <div class="panel">
+        <p>
+            Buffalo, New York<br>
+            Acceptance Rate: 64%<br>
+            Popular Majors: Social Science, Business, Management, Marketing, Engineering, Psychology,<br>
+            and Biological and Biomedical Sciences<br>
+            Application Fee: $50<br>
+            GPA: 3.6<br>
+            SAT Critical Reading: 560/660<br>
+                Math: 570/670<br>
+                Average: 1130-1330<br>
+            ACT: 21/23<br>
+            College Home Page: <a href="http://suny.buffalostate.edu/">http://suny.buffalostate.edu/</a><br>
+        </p>
+    </div>
+
+<button class="accordion">Corning Community College</button>
+    <div class="panel">
+        <p>
+            Steuben County, New York<br>
+            Acceptance Rate: 58%<br>
+            Popular Majors: Liberal Arts and Sciences, General Studies and<br>
+            Humanities, Business, Management, Marketing<br>
+            Application Fee: N/A<br>
+            GPA: N/A<br>
+            SAT Critical Reading:N/A<br> 
+            Math:N/A<br> 
+            ACT:N/A<br>
+            College Home Page: <a href="https://www.corning-cc.edu/">https://www.corning-cc.edu/</a><br>
+        </p>
+    </div>
+
+<button class="accordion">Empire State College</button>
+    <div class="panel">
+        <p>
+            Empire State Building, Midtown, Manhattan<br>
+            Acceptance Rate: 81%<br>
+            Popular Majors: Business, Management, Marketing, Public Administration,<br>
+             Social Service Professions, Psychology, Physical Sciences and Health Professions<br> 
+            Application Fee: $50<br>
+            GPA: N/A<br>
+            SAT Critical Reading: SAT SCORES NOT REQUIRED<br>
+                Math:N/A<br> 
+                Average:N/A<br>    
+                College Home Page: <a href="https://www.esc.edu/">https://www.esc.edu/</a><br>
+        </p>
+    </div>
+
+<button class="accordion">Environmental Science and Forestry College</button>
+    <div class="panel">
+        <p>
+            Syracuse, New York<br>
+            Acceptance Rate: 52%<br>
+            Popular Majors: Environmental Biology, Engineering, Chemistry<br>
+            Application Fee: $50<br>
+            GPA: 3.85<br>
+            SAT Critical Reading:<br>
+                Math: 580/690<br>
+            Average: 1110-1260<br>
+            ACT: 26/29<br>   
+            College Home Page: <a href="http://www.esf.edu/">http://www.esf.edu/</a><br>
+        </p>
+    </div>
+
+<button class="accordion">Fashion Institute of Technology</button>
+    <div class="panel">
+        <p>
+            NYC, New York<br>
+            Acceptance Rate:44.3%<br>
+            Popular Majors: Fashion Merchandising , Fashion/Apparel Design,<br>
+             International Marketing and Commercial and Advertising Art<br>
+            Application Fee: $50<br>
+            GPA: 3.42<br>
+            SAT Critical Reading: 520/600<br>
+                Math: 580/660<br>
+            Average SAT: 1166<br>
+            ACT: 16/30<br>    
+            College Home Page: <a href="http://www.fitnyc.edu/">http://www.fitnyc.edu/</a><br>
+        </p>
+    </div>
+
+<button class="accordion">Oswego</button>
+    <div class="panel">
+        <p>
+            Oswego County, New York<br>
+            Acceptance Rate: 51%<br>
+            Popular Majors: Business Administration and Management, General,<br>
+            Psychology, Criminal Justice/Law Enforcement Administration,<br> 
+            and Health Teacher Education<br>   
+            Application Fee: $50<br>
+            GPA: 3.5<br>
+            SAT Critical Reading: 510/600<br>
+                Math: 510/590<br>
+            Average SAT: 1200<br>
+            ACT: 22/26<br>
+            College Home Page: <a href="https://www.oswego.edu/">https://www.oswego.edu/</a><br>
+        </p>
+    </div>
+
+<button class="accordion">Stony Brook</button>
+<div class="panel">
+        <p>Long Island, New York<br>
+            Acceptance Rate: 40.7%<br>
+            Popular Majors: Psychology, Biology/Biological Sciences,<br>
+            Business Administration and Management, Registered Nursing<br>
+            Application Fee: $50<br>
+            GPA: 3.79<br>
+            SAT Critical Reading: 550/660<br>
+                Math: 600/720<br>
+            Average SAT: 1253<br>
+            ACT: 26/30<br>
+            College Home Page: <a href="http://www.stonybrook.edu/">http://www.stonybrook.edu/</a><br>
+        </p>
+    </div>
+
+
+<button class="accordion">College of Optometry</button>
+    <div class="panel">
+        <p>Midtown, Manhattan<br>
+            Acceptance Rate: 16%<br>
+            Popular Majors: N/A<br> 
+            Application Fee: $60; $500 acceptance fee<br>
+            GPA: 3.2<br>
+            SAT Critical Reading: ***Need to take Optometry Admissions Test (OAT)<br> 
+            Math: N/A<br>
+            ACT: N/A<br>
+            College Home Page: <a href="https://www.sunyopt.edu/">https://www.sunyopt.edu/</a><br>
+        </p>
+    </div>
+
+<button class="accordion">Maritime College</button>
+    <div class="panel">
+        <p>Bronx, New York<br>
+            Acceptance Rate: 68%<br>
+            Popular Majors: Marine Science/Merchant Marine, Business Management,<br> 
+            Marketing, Mechanical Engineering, Industrial Engineering,<br>
+             Naval Architecture, and Marine Engineering<br>  
+            Application Fee: $50<br>
+            GPA: 3.26<br>
+            SAT Critical Reading: 530/620<br> 
+                Math: 560/630<br>
+            Average SAT: 1170<br>
+            ACT: 22/26<br>
+            College Home Page: <a href="http://www.sunymaritime.edu/">http://www.sunymaritime.edu/</a><br>
+        </p>
+    </div>
+
+<button class="accordion">Westchester Community College</button>
+    <div class="panel">
+        <p>Valhalla, New York<br>
+            Acceptance Rate: N/A<br> 
+            Popular Majors: Liberal Arts and Sciences, General Studies and<br>
+            Humanities, Business, Management, Marketing<br>
+            Application Fee: $35<br>
+            GPA: 2.46<br>
+            SAT Critical Reading: N/A<br>
+                Math: N/A<br>
+                Average:N/A<br>
+            ACT:N/A<br>
+            College Home Page: <a href="http://www.sunywcc.edu/">http://www.sunywcc.edu/</a><br>
+                
+        </p>
+    </div>
+</div>
+
+   <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].onclick = function(){
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        }
+    }
+
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+
+    </script>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+ <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/stylish-portfolio.js"></script>
+
+</body>
+</html>
+
