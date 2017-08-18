@@ -7,7 +7,7 @@
     <meta name="author" content="">
 
     <title>SUNY Colleges</title>
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
@@ -216,17 +216,36 @@
   .prev, .next,.text {font-size: 11px}
 }
 
-    </style>
+  div#menu{
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+}
+
+</style>
+  
 </head>
+
 <body>
 <div id="head1">
+
 <div style="text-align: right; width: 100%;">
-<button id="right" style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="fa fa-university"></i></button>
+
+<!-- <button id="right" style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="fa fa-university"></i></button> -->
+<button id = "right" style="font-size:30px;cursor:pointer" class="closebtn" onclick="openNav()"> 
+  <i class = "fa fa-bars"></i>
+  <!-- <div id ="menu"></div>
+  <div id ="menu"></div>
+  <div id ="menu"></div> -->
+</button>
+
 </div>
 
 <div id="mySidenav" class="sidenav" class = "dropdown">
+  <div id ="menu"></div>
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <button id="color"><a href="./index.html#top">Home</a></button>
+  <button id="color" ><a href="./index.html#top">Home</a></button>
   <button id="color"><a href="">About Us</a></button>
   <button id="color"><a href="./index.html#about" class="dropbtn">College Info</a></button>  
   <button id="color"><a href="#">College Process</a></button>
@@ -475,7 +494,7 @@
                 Average: 1170-1370 <br>
             ACT: 24/29 <br>
             College Home Page:<a href="https://www.syracuse.edu/"> Click here</a> <br>
-            For more information: <a href="https://www.princetonreview.com/schools/1024060/college/syracuse-university"> Princeton Review</a> 
+            For more information: <a href="https://www.princetonreview.com/schools/1024060/college/syracuse-university">Princeton Review</a> 
         </p>
     </div>
 
@@ -491,7 +510,7 @@
                 Average: 1348 <br>
             ACT: 29/33 <br>
             College Home Page:<a href="https://www.rochester.edu/"> Click here</a> <br>
-            For more information: <a href="https://www.princetonreview.com/schools/1024047/college/university-rochester"> Princeton Review</a>
+            For more information: <a href="https://www.princetonreview.com/schools/1024047/college/university-rochester">Princeton Review</a>
         </p>
     </div>
 
@@ -551,18 +570,6 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 </script>
-
- <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/popper/popper.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for this template -->
-    <script src="js/stylish-portfolio.js"></script>
-
 
 </body>
 </html>
