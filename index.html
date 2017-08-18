@@ -6,7 +6,12 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Stylish Portfolio - Start Bootstrap Template</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
@@ -97,10 +102,10 @@ div#table1{
 
 button#design{
    float: right;
-   position: absolute;
+   position: fixed;
    top: 4;
    right: 0;
-    background-color: rgba(0,0,0,0.8);
+   background-color: rgba(0,0,0,0.8);
 }
 
 .blue {
@@ -110,12 +115,37 @@ button#design{
 
 h1 { 
    position: absolute; 
-   bottom: 350px;
+   bottom: 400px;
    left: 0; 
    width: 100%; 
+   color: white;
 }
 
+p.po{
+   position: absolute; 
+   bottom: 299px; 
+   left: 100; 
+   width: 100%;
+   color: white;
+   font-size: 20px;
+} 
 
+div#part1{
+    height: auto;
+    width: 100%;
+    background-color: blue;
+    justify-content: center;
+}
+
+ .service{
+    margin-bottom: 30px;
+    color: white;
+
+}
+
+.colleges{
+    background-color: blue; 
+}
 </style>
 
 </head>
@@ -123,12 +153,13 @@ h1 {
 <div id="head1">
 
     <div class="blue">
-        <button id="design" style="font-size:30px;cursor:pointer" onclick="openNav()">
-          <i class="fa fa-bars"></i>
-        </button>
+                <button id="design" style="font-size:30px;cursor:pointer" onclick="openNav()">
+                  <i class="fa fa-bars"></i>
+                </button>
 
-    <img src="bg.jpg" style="height: 700px; width: 100%;"></img>
-    <h1><span>College Scholar<span></h1>
+            <img src="bg.jpg" style="height: 700px; width: 100%;"></img>
+            <h1><span>College Scholar<span></h1>
+            <p class="po" align="center">College Scholar is a Website that helps students like you <br>find college information and gives you knowledge on the college process.</p>
     </div>
 
     <div id="mySidenav" class="sidenav">
@@ -143,6 +174,95 @@ h1 {
     </div>
 </div>
 
+<div class="container-fluid bg-3 text-center colleges" id="projects">    
+    <h3 class="margin" >Recent Projects</h3><br>
+    <div class="row vertical-align">
+        <div class="col-sm-4">
+        <div class="service">
+                <span class="fa-stack fa-4x">
+                <i class="fa fa-circle fa-stack-2x" style="color: white;"></i>
+                <i class="fa fa-book fa-stack-1x text-primary" style="color: blue;"></i>
+                </span>
+                <h4>
+                <strong>CUNY</strong>
+                </h4>
+                <p>City University of New York </p>
+                <a href="./cuny.html" class="btn btn-light">Learn More</a>
+                </div>
+
+        </div>
+  
+      <div class="col-sm-4"> 
+      <div class="service">
+                <span class="fa-stack fa-4x">
+                <i class="fa fa-circle fa-stack-2x" style="color: white;"></i>
+                <i class="fa fa-graduation-cap fa-stack-1x text-primary" style="color: blue;"></i>
+                 </span>
+                <h4>
+                 <strong>SUNY</strong>
+                </h4>
+                <p>State University of New York.</p>
+                <a href="./SUNY.html" class="btn btn-light">Learn More</a>
+                </div>
+
+      </div>
+
+      <div class="col-sm-4"> 
+
+       <div class="service">
+                <span class="fa-stack fa-4x">
+                <i class="fa fa-circle fa-stack-2x" style="color: white;"></i>
+                <i class="fa fa-university fa-stack-1x text-primary"  style="color: blue;"></i>
+                </span>
+                 <h4>
+                <strong>Private Colleges</strong>
+                </h4>
+                <p>Colleges not owned by NYS.</p>
+                <a href="./private.html" class="btn btn-light">Learn More</a>
+                </div>
+
+    </div>
+  </div>
+</div>
+<!-- 
+ <div  align="center">
+
+                <div class="service">
+                <span class="fa-stack fa-4x">
+                <i class="fa fa-circle fa-stack-2x" style="color: white;"></i>
+                <i class="fa fa-book fa-stack-1x text-primary" style="color: blue;"></i>
+                </span>
+                <h4>
+                <strong>CUNY</strong>
+                </h4>
+                <p>City University of New York </p>
+                <a href="./cuny.html" class="btn btn-light">Learn More</a>
+                </div>
+
+                <div class="service" style="float: center;">
+                <span class="fa-stack fa-4x">
+                <i class="fa fa-circle fa-stack-2x" style="color: white;"></i>
+                <i class="fa fa-graduation-cap fa-stack-1x text-primary" style="color: blue;"></i>
+                 </span>
+                <h4>
+                 <strong>SUNY</strong>
+                </h4>
+                <p>State University of New York.</p>
+                <a href="./SUNY.html" class="btn btn-light">Learn More</a>
+                </div>
+
+                 <div class="service" style="float: right;">
+                <span class="fa-stack fa-4x">
+                <i class="fa fa-circle fa-stack-2x" style="color: white;"></i>
+                <i class="fa fa-university fa-stack-1x text-primary"  style="color: blue;"></i>
+                </span>
+                 <h4>
+                <strong>Private Colleges</strong>
+                </h4>
+                <p>Colleges not owned by NYS.</p>
+                <a href="./private.html" class="btn btn-light">Learn More</a>
+                </div>
+ </div> -->
 </body>
 
 <script>
