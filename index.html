@@ -105,9 +105,16 @@ button#design{
    position: fixed;
    top: 4;
    right: 0;
-   background-color: rgba(0,0,0,0.8);
+  color: black;
+  background: rgba(0,0,0,0.5);
+  outline: none;
+  border: none;
 }
 
+#design:hover{
+    color: black;
+  background: rgba(0,0,0,0.7);
+}
 .blue {
     position: relative; 
    width: 100%;
@@ -121,13 +128,12 @@ h1 {
    color: white;
 }
 
-p.po{
+h3.po{
    position: absolute; 
-   bottom: 299px; 
+   bottom: 359px; 
    left: 100; 
    width: 100%;
    color: white;
-   font-size: 20px;
 } 
 
 div#part1{
@@ -197,46 +203,100 @@ h4{
   margin-top:0;margin-bottom:.5rem;
 }
 
-  .col-md-3 {
-    -ms-flex: 0 0 25%;
-        flex: 0 0 25%;
-    max-width: 25%;
+small,
+.small {
+  font-size: 80%;
+  font-weight: normal;
+}
+
+.btn-light:hover {
+  color: #111;
+  background-color: #e2e6ea;
+  border-color: #dae0e5;
+}
+
+.btn-light:focus, .btn-light.focus {
+  box-shadow: 0 0 0 3px rgba(248, 249, 250, 0.5);
+}
+
+.btn-light.disabled, .btn-light:disabled {
+  background-color: #f8f9fa;
+  border-color: #f8f9fa;
+}
+
+.btn-light:active, .btn-light.active,
+.show > .btn-light.dropdown-toggle {
+  background-color: #e2e6ea;
+  background-image: none;
+  border-color: #dae0e5;}
+
+  a.btn.btn-light {
+    background-color: white;
   }
 
-  .col-md-6 {
-    -ms-flex: 0 0 50%;
-        flex: 0 0 50%;
-    max-width: 50%;
-  }
+#text-center {
+  text-align: center !important;
+}
 
+.btn-dark {
+  color: black;
+  background: rgba(0,0,0,0.5);
+}
+
+.btn-dark:hover {
+  color: black;
+  background: rgba(0,0,0,0.7);
+}
+
+a#btn1{
+position: absolute;
+float: right;
+   top: 359px; 
+   left: 599px; 
+   color: white;
+justify-content: center;
+
+
+}
+
+div.part2{
+   margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  width: 100%;
+}
 </style>
 
 </head>
 <body>
 <div id="head1">
 
-    <div class="blue">
-                <button id="design" style="font-size:30px;cursor:pointer" onclick="openNav()">
-                  <i class="fa fa-bars"></i>
+    <div class="blue" align="center">
+                <button id="design" style="font-size:35px;cursor:pointer;width: 5%" onclick="openNav()">
+                  <i class="fa fa-bars" style="color: white; font-size: 25px"></i>
                 </button>
 
             <img src="bg.jpg" style="height: 700px; width: 100%;"></img>
             <h1><span>College Scholar<span></h1>
-            <p class="po" align="center">College Scholar is a Website that helps students like you <br>find college information and gives you knowledge on the college process.</p>
+            <h3 class="po" align="center">Free College Reference &amp; Guidance</h3>
+            <a href="#part2" id="btn1" class="page-scroll btn btn-dark btn-lg" style="transition: all 0.5s ease-in;">Find Out More</a>
     </div>
 
     <div id="mySidenav" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
       <button id="color"><a href="./index.html#top">Home</a></button>
-      <button id="color"><a href="">About Us</a></button>
-      <div class="dropdown">
-        <button id="color"><a href="./index.html#about" class="dropbtn">College Info</a></button>
-      </div>
+      <button id="color"><a href="./index.html#services" class="dropbtn">College Info</a></button>
+       <button id="color"><a href="">About Us</a></button>
       <button id="color"><a href="#">College Process</a></button>
       <button id="color"><a href="#">Contact</a></button>
     </div>
 </div>
 
+<div id= "part2" class="part2 text-center" >
+   <h2>What is College Scholar?</h2>
+            <p class="lead" align="Centered">College Scholar is a Website that helps students like you find college <br> information and gives you some knowledge on the college processes.</p>
+</div>
  <section id="services" class="services bg-primary text-white">
         <div class="container">
             <div class="row text-center">
@@ -294,45 +354,7 @@ h4{
         <!-- /.container -->
     </section>
 
-<!-- 
- <div  align="center">
 
-                <div class="service">
-                <span class="fa-stack fa-4x">
-                <i class="fa fa-circle fa-stack-2x" style="color: white;"></i>
-                <i class="fa fa-book fa-stack-1x text-primary" style="color: blue;"></i>
-                </span>
-                <h4>
-                <strong>CUNY</strong>
-                </h4>
-                <p>City University of New York </p>
-                <a href="./cuny.html" class="btn btn-light">Learn More</a>
-                </div>
-
-                <div class="service" style="float: center;">
-                <span class="fa-stack fa-4x">
-                <i class="fa fa-circle fa-stack-2x" style="color: white;"></i>
-                <i class="fa fa-graduation-cap fa-stack-1x text-primary" style="color: blue;"></i>
-                 </span>
-                <h4>
-                 <strong>SUNY</strong>
-                </h4>
-                <p>State University of New York.</p>
-                <a href="./SUNY.html" class="btn btn-light">Learn More</a>
-                </div>
-
-                 <div class="service" style="float: right;">
-                <span class="fa-stack fa-4x">
-                <i class="fa fa-circle fa-stack-2x" style="color: white;"></i>
-                <i class="fa fa-university fa-stack-1x text-primary"  style="color: blue;"></i>
-                </span>
-                 <h4>
-                <strong>Private Colleges</strong>
-                </h4>
-                <p>Colleges not owned by NYS.</p>
-                <a href="./private.html" class="btn btn-light">Learn More</a>
-                </div>
- </div> -->
 </body>
 
 <script>
