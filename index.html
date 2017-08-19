@@ -8,9 +8,7 @@
 
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
@@ -26,7 +24,7 @@
             height: 100%;
             width: 0;
             position: fixed;
-            z-index: 1;
+            z-index: 99;
             top: 0;
             right: 0;
             background-color: #111;
@@ -209,26 +207,7 @@ small,
   font-weight: normal;
 }
 
-.btn-light:hover {
-  color: #111;
-  background-color: #e2e6ea;
-  border-color: #dae0e5;
-}
 
-.btn-light:focus, .btn-light.focus {
-  box-shadow: 0 0 0 3px rgba(248, 249, 250, 0.5);
-}
-
-.btn-light.disabled, .btn-light:disabled {
-  background-color: #f8f9fa;
-  border-color: #f8f9fa;
-}
-
-.btn-light:active, .btn-light.active,
-.show > .btn-light.dropdown-toggle {
-  background-color: #e2e6ea;
-  background-image: none;
-  border-color: #dae0e5;}
 
   a.btn.btn-light {
     background-color: white;
@@ -266,6 +245,26 @@ div.part2{
   padding-left: 15px;
   width: 100%;
 }
+
+#services2{
+  background-color: darkorange;
+}
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 80; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    color: white;
+    background: blue;
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+}
+ 
 </style>
 
 </head>
@@ -344,6 +343,93 @@ div.part2{
           
                             </div>
                         </div>
+
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-level-down fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>Other</strong>
+                                </h4>
+                                <p>Colleges not in NYS.</p>
+                                <a href="#services2" class="btn btn-light">Learn More</a>
+          
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.row (nested) -->
+                </div>
+                <!-- /.col-lg-10 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+ <section id="services2" class="services bg-primary text-white">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-10 mx-auto">
+                <br>
+                    <h2>Dont live In NY? Check out these websites.</h2>
+                    <hr class="small">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa-stack-1x text-info"> <img src="hat4.png" style="height: 100px; width: 60%;"></i>
+                            </span>
+                                <h4>
+                                    <strong>Cappex</strong>
+                                </h4>
+                                <p>A website which will help you find colleges in different states.</p>
+                                <a href="https://www.cappex.com/colleges" class="btn btn-light">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa-stack-1x text-info"> <img src="hat3.png" style="height: 70px; width: 80%;"></i>
+                            </span>
+                                <h4>
+                                    <strong>College Majors</strong>
+                                </h4>
+                                <p>A website which will help you find colleges based on majors.</p>
+                                <a href="http://collegemajors101.com/" class="btn btn-light">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                 <i class="fa-stack-1x text-info"> <img src="acorn.png" style="height: 70px; width: 53%;"></i>
+                            </span>
+                                <h4>
+                                    <strong>College Board</strong>
+                                </h4>
+                                <p>A website which gives information and reviews on various colleges.</p>
+                                <a href="https://bigfuture.collegeboard.org/college-search" class="btn btn-light">Learn More</a>
+                            </div>
+                        </div>
+
+                          <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                 <i class="fa-stack-1x text-info"> <img src="add.png" style="height: 70px; width: 53%;"></i>
+                            </span>
+                                <h4>
+                                    <strong>Other</strong>
+                                </h4>
+                                <p>See more websites for your college search outside of NYS.</p>
+                                <a href="#services2" class="btn btn-light">Learn More</a>
+          
+                            </div>
+                        </div>
                     </div>
                     <!-- /.row (nested) -->
                 </div>
@@ -355,9 +441,66 @@ div.part2{
     </section>
 
 
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto text-center">
+                    <h4><strong>Start Bootstrap</strong>
+                    </h4>
+                    <p>3481 Melrose Place
+                        <br>Beverly Hills, CA 90210</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fa fa-phone fa-fw"></i> (123) 456-7890</li>
+                        <li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:name@example.com">name@example.com</a>
+                        </li>
+                    </ul>
+                    <br>
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#"><i class="fa fa-dribbble fa-fw fa-3x"></i></a>
+                        </li>
+                    </ul>
+                    <hr class="small">
+                    <p class="text-muted">Copyright &copy; Your Website 2017</p>
+                </div>
+            </div>
+        </div>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top
+        <i class="fa fa-chevron-up fa-fw fa-1x"></i>
+        </button>
+    </footer>
+
 </body>
 
+
 <script>
+ window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+
+<script>
+
     function openNav() {
         document.getElementById("mySidenav").style.width = "250px";
     }
@@ -621,48 +764,13 @@ div.part2{
   }
 </script>
 
+
+</script>
+
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKaRTQet_0WNGbmUoEy0Q8lGL0qNKim5g&callback=myMap"></script>
 <!--
 To use this code on your website, get a free API key from Google.
 Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
 -->
-
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 mx-auto text-center">
-                    <h4><strong>Start Bootstrap</strong>
-                    </h4>
-                    <p>3481 Melrose Place
-                        <br>Beverly Hills, CA 90210</p>
-                    <ul class="list-unstyled">
-                        <li><i class="fa fa-phone fa-fw"></i> (123) 456-7890</li>
-                        <li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:name@example.com">name@example.com</a>
-                        </li>
-                    </ul>
-                    <br>
-                    <ul class="list-inline">
-                        <li class="list-inline-item">
-                            <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#"><i class="fa fa-dribbble fa-fw fa-3x"></i></a>
-                        </li>
-                    </ul>
-                    <hr class="small">
-                    <p class="text-muted">Copyright &copy; Your Website 2017</p>
-                </div>
-            </div>
-        </div>
-        <a id="to-top" href="#top" class="btn btn-dark btn-lg page-scroll"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
-    </footer>
-
-  
-</body>
 
 </html>

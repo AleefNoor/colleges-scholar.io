@@ -6,15 +6,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SUNY Colleges</title>
+    <title>Private Colleges</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Custom Fonts -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-
-    <!-- Custom CSS -->
-    <link href="css/stylish-portfolio.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
 <style>
 
@@ -83,7 +76,8 @@
         }
 
         button.accordion.active, button.accordion:hover {
-            background-color: #1C77C3; 
+            background-color: maroon;
+            color: white; 
             outline: none;
 
         }
@@ -101,7 +95,7 @@
             height: auto;
             float: right;
             border: solid;
-            border-color: navy;
+            border-color: red;
             justify-content: center;
             background-color: #C9D6EA;
         }
@@ -124,8 +118,9 @@
 
 
         div#head1{
-          background-image: url("h1.jpg");
+          background-image: url("h2.jpg");
           height: 25%;
+          position: relative;
         }
 
         
@@ -142,11 +137,11 @@
 .prev, .next {
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: 60%;
   width: auto;
   padding: 16px;
   margin-top: -22px;
-  color: blue;
+  color: maroon;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
@@ -173,7 +168,7 @@
   bottom: 8px;
   width: 100%;
   text-align: center;
-  background-color: darkblue;
+  background-color: maroon;
 }
 
 
@@ -216,12 +211,36 @@
   .prev, .next,.text {font-size: 11px}
 }
 
-  div#menu{
-    width: 35px;
-    height: 5px;
-    background-color: black;
-    margin: 6px 0;
+
+
+#btn{
+  color: black;
+  background: rgba(0,0,0,0.5);
+  border: none;
+  outline: none;
 }
+
+#btn:hover{
+    color: black;
+  background: rgba(0,0,0,0.7);
+}
+
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: red; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+}
+ 
 
 </style>
   
@@ -233,11 +252,8 @@
 <div style="text-align: right; width: 100%;">
 
 <!-- <button id="right" style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="fa fa-university"></i></button> -->
-<button id = "right" style="font-size:30px;cursor:pointer" class="closebtn" onclick="openNav()"> 
-  <i class = "fa fa-bars"></i>
-  <!-- <div id ="menu"></div>
-  <div id ="menu"></div>
-  <div id ="menu"></div> -->
+<button id = "btn" style="font-size:40px;cursor:pointer" class="closebtn" onclick="openNav()"> 
+  <i class = "fa fa-university" style="color: maroon;"></i>
 </button>
 
 </div>
@@ -260,7 +276,7 @@
       <img src="private.png" id = "changes" style="float:right; width: 50%"></img>
 
     <span style="float:left;width:50%; font-size: 20px; line-height: 150%">
-        Private schools are also known as independent schools because they are not funded by the government. <br> This is why private schools have the right to charge their students tuition.Click on the private colleges on the left to get information on some popular private colleges.
+        Private schools are independent schools because they are not funded by the government. This is why private schools charge their students tuition.Click on the private colleges on the left to get information on some popular private colleges.
     <br>
     </span>
     <br>    
@@ -511,10 +527,14 @@
             College Home Page:<a href="https://www.rochester.edu/"> Click here</a> <br>
             For more information: <a href="https://www.princetonreview.com/schools/1024047/college/university-rochester">Princeton Review</a>
         </p>
+
     </div>
 
 </div>
 
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top
+        <i class="fa fa-chevron-up fa-fw fa-1x"></i>
+        </button>
    <script>
     var acc = document.getElementsByClassName("accordion");
     var i;
@@ -570,5 +590,22 @@ function showSlides(n) {
 }
 </script>
 
+<script>
+ window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
 </body>
 </html>
