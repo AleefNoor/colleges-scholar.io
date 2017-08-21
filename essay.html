@@ -64,16 +64,10 @@
         }
 
         div#head1{
-            position: relative;
-            display: table;
-                width: 100%;
-                height: 90%;
-                background: url(s1.jpg) no-repeat center center scroll;
-                -webkit-background-size: cover;
-                -moz-background-size: cover;
-                -o-background-size: cover;
-                background-size: cover;
-                color: white;
+            background-image: url(s1.jpg);
+            background-size: cover;
+            height: 300px;
+            color: white;
         }
 
         h1 {
@@ -116,10 +110,13 @@ div#table1{
             outline: none;
         }
 
-        button#right:hover {
-          color: black;
-          background: rgba(0,0,0,0.7);
-}
+        button#right:hover{
+            color: #F5E9E2;
+            background: rgba(0,0,0,0.1);
+            border: none;
+            outline: none;
+        }
+      
 </style>
 
 </head>
@@ -129,7 +126,7 @@ div#table1{
         <button id="right" style="font-size:40px;cursor:pointer" onclick="openNav()">
             <i class="fa fa-file-pdf-o"></i>
         </button>
-    </div>
+</div>
 
     <div id="mySidenav" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -169,6 +166,7 @@ div#table1{
 </div>
     
 </div>
+
 </body>
 
 <script>
