@@ -1,9 +1,82 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title> Photo Credits </title>
 
-<style type="text/css">
+ <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+   <title> Photo Credits </title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+
+<style>
+
+* {box-sizing:border-box}
+        body {
+            font-family: "Lato", sans-serif;
+
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 100;
+            top: 0;
+            right: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover, .offcanvas a:focus{
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        @media screen and (max-height: 450px) {
+          .sidenav {padding-top: 15px;}
+          .sidenav a {font-size: 18px;}
+        }
+
+        #color {
+            background-color: transparent;
+            outline: none;
+            border: none;
+        }
+
+        button#right{
+            color: #F5E9E2;
+            background: rgba(0,0,0,0.5);
+            border: none;
+            outline: none;
+        }
+
+        button#right:hover{
+            color: #F5E9E2;
+            background: rgba(0,0,0,0.1);
+            border: none;
+            outline: none;
+        }
 body{
 background-color:#1D2D44;
 }
@@ -29,22 +102,58 @@ color: red;
 h2{
 color:#069E2D;
 }
+
+p{
+	color:white ;
+}
 </style>
+</head>
 <body>
+<div id="head1">
+
+<div style="text-align: right; width: 100%;">
+  <button id = "right" style="font-size:40px;cursor:pointer" class="closebtn" onclick="openNav()"> 
+    <i class = "fa fa-graduation-cap " style="color: lightblue;"></i></button>
+  </div>
+    
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <button id="color"><a href="./index.html#top">Home</a></button>
+  <button id="color"><a href="./index.html#services" class="dropbtn">College Info</a></button>
+  <button id="color"><a href="#services3">College Process</a></button>
+  <button id="color"><a href="./index.html#aboutus">About Us</a></button>	
+	
+</div>
 <h3> Photo Credits </h3>
+
 <h1>
-<h2>NYC Skyline:</h2> <h1>https://www.theodysseyonline.com/nyc-love-you-but-youre-killing</h1>
-<h2>Books Wallpaper:</h2><h1>http://wallpapersdsc.net/other/book-61181.html</h1>
-<h2>Baruch:</h2><h1>https://macaulay.cuny.edu/about-macaulay/macaulay-at-cuny/baruch-college/</h1> 
-<h2>Brooklyn:</h2><h1>http://www.brooklyn.cuny.edu/web/library.php</h1>
-<h2>CCNY:</h2><h1>http://calfocus.com/archives/11341</h1>
-<h2>CityTech:</h2><h1>https://www.jinlisting.com/listing/tci-%E7%A7%91%E6%8A%80%E8%81%8C%E4%B8%9A%E5%A4%A7%E5%AD%A6-the-college-of-technology-888-295-6988/</h1>
-<h2>Staten Island:</h2><h1>https://www.theodysseyonline.com/why-the-college-staten-island-isnt-bad</h1>
-<h2>Hunter:</h2><h1>http://www.topmedicalcodingschools.com/what-are-the-best-medical-billing-and-coding-programs-online/</h1>
-<h2>John Jay:</h2><h1>http://www.usasom.com/index.php?id=927</h1> 
-<h2>Lehman:</h2><h1>https://www.usnews.com/best-colleges/lehman-college-7022/photos</h1> 
-<h2>Medger:</h2><h1>https://saboteur365.wordpress.com/2015/12/page/7/</h1> 
-<h2>Queens:</h2><h1>http://odessareview.com/memories-yevgeny-yevtushenko/</h1>
+<h2>NYC Skyline:</h2> 
+	<p>https://www.theodysseyonline.com/nyc-love-you-but-youre-killing</p>
+
+<h2>Books Wallpaper:</h2>
+	<p>http://wallpapersdsc.net/other/book-61181.html</p>
+
+<h2>Baruch:</h2>
+	<h1>https://macaulay.cuny.edu/about-macaulay/macaulay-at-cuny/baruch-college/</h1> 
+
+<h2>Brooklyn:</h2>
+	<h1>http://www.brooklyn.cuny.edu/web/library.php</h1>
+<h2>CCNY:</h2>
+	<h1>http://calfocus.com/archives/11341</h1>
+<h2>CityTech:</h2>
+	<h1>https://www.jinlisting.com/listing/tci-%E7%A7%91%E6%8A%80%E8%81%8C%E4%B8%9A%E5%A4%A7%E5%AD%A6-the-college-of-technology-888-295-6988/</h1>
+<h2>Staten Island:</h2>
+	<h1>https://www.theodysseyonline.com/why-the-college-staten-island-isnt-bad</h1>
+<h2>Hunter:</h2>
+	<h1>http://www.topmedicalcodingschools.com/what-are-the-best-medical-billing-and-coding-programs-online/</h1>
+<h2>John Jay:</h2>
+	<h1>http://www.usasom.com/index.php?id=927</h1> 
+<h2>Lehman:</h2>
+	<h1>https://www.usnews.com/best-colleges/lehman-college-7022/photos</h1> 
+<h2>Medger:</h2>
+	<h1>https://saboteur365.wordpress.com/2015/12/page/7/</h1> 
+<h2>Queens:</h2>
+	<h1>http://odessareview.com/memories-yevgeny-yevtushenko/</h1>
 <h1> 
 <h2>Buffalo State:</h2><h1>https://collegetimes.co/buffalo-state-college/</h1>
 <h2>Corning:</h2><h1>https://www.corning-cc.edu/locations/elmira</h1> 
@@ -67,5 +176,20 @@ color:#069E2D;
 <h2>St.Johns:</h2><h1>https://www.theodysseyonline.com/31-st-johns-commuters-understand</h1> 
 <h2>Syracuse:</h2><h1>http://eli.syr.edu/about-us/about-syracuse-university/</h1> 
 <h2>Rochester:</h2><h1>https://oneclass.com/blog/university-of-rochester/13024-10-of-the-best-rated-courses-at-the-university-of-rochester</h1> 
+
+
+             
 </body>
-</head>
+<script>
+
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+
+</script>
+</html> 
+
