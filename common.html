@@ -1,0 +1,179 @@
+<html>
+<head> 
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+		.sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover, .offcanvas a:focus{
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        @media screen and (max-height: 450px) {
+          .sidenav {padding-top: 15px;}
+          .sidenav a {font-size: 18px;}
+        }
+
+        #color {
+            background-color: transparent;
+            outline: none;
+            border: none;
+        }
+
+        div#center{
+            width: 50%;
+            height: auto;
+            margin-left:auto;
+            margin-right:auto;
+            border: solid;
+            border-color: orange;
+            justify-content: center;
+            background-color: white;
+        }
+
+        body{
+        	background-image: url(common_app.jpg);
+
+       }
+        	/*background-color: #773344;
+        }
+*/
+
+        button#right{
+        	color: #F5E9E2;
+  			background: rgba(0,0,0,0.5);
+  			border: none;
+  			outline: none;
+        }
+
+        button#right:hover {
+		  color: black;
+		  background: rgba(0,0,0,0.7);
+}
+
+</style>
+</head>
+
+<body>
+
+ <div id="head1">
+        <div style="text-align: right; width: 100%;"> 
+            <button id="right" style="font-size:40px;cursor:pointer" onclick="openNav()"><i class="fa fa-folder-open"></i></button>
+        </div>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <button id="color"><a href="./index.html#top">Home</a></button>
+      <button id="color"><a href="">About Us</a></button>
+      <button id="color"><a href="./index.html#about" class="dropbtn">College Info</a></button>  
+      <button id="color"><a href="#">College Process</a></button>
+      <button id="color"><a href="#">Contact</a></button>
+     </div>
+ 	
+ 	<div id = center>
+      <h1 align="center">Common Application</h1>
+    </div>
+
+    <div id=center>
+    	<p align = "center"> Getting ready to start your college application? <br> 
+    	Read the steps below to understand how the Common App works.</p>
+    </div>
+
+    <div id =center>
+    	<a href="http://www.commonapp.org/how-apply"> The Common Application</a>
+    	<p> The Common Application allows students to apply to any of the 733 member colleges and universities. It helps students to manage their college application process with tracking and submitting required documents.  </p>
+
+    		<ol>
+		    	<li> <b> Make an account </b> </li>
+		    		<di>
+		    			You will need to fill in your basic information: address, name, phone number and date of birth. When creating your account your e-mail is your username and your account will need to be varified with your e-mail.  <br>
+		    		</di>
+		    		
+
+		    	<li> <b> Add Schools </b> </li>
+		    		<di>
+		    			Make a list of schools you are interested in. You can search for colleges or universites that follow the Common App through the "College Search" tab. You can find the colleges by filling out their location, name, or application deadline. Consider making a list of reach, safety and target colleges. Then add them to your "My Colleges" List. 
+		    		</di>
+		    		<br>
+
+		    	<li> <b> Gather General Information </b> </li>
+		    		<di> 
+		    			For every application you fill in you will need: 
+		    			<br>
+		    				&nbsp &nbsp 
+		    				A copy of your High School Transcript 
+		    			<br>
+		    				&nbsp &nbsp 
+		    				A list of extracurricular activites 
+		    			<br>
+		    				&nbsp &nbsp 
+		    				Test Scores (ACTs, SATs, Subject Tests)
+		    			<br>
+		    				&nbsp &nbsp Parent/ Legal Guardian Information
+
+		    		</di>
+		    		<br>
+
+		    	<li>  <b> Find out what requirements are needed when applying to a school </b></li>
+		    		<di>
+		    			Not two schools that you apply to have the same requirements. Research the application requirements for the different schools you have added on your "My Colleges" List. Be sure to submit your information on time! Check their deadlines and set reminders! 
+		    		</di>
+			</ol>
+
+		<p> Do not know if the college you are applying uses the Common Application? <a href="http://www.commonapp.org/search-colleges"> Click here</a> </p>
+    </div>
+
+    <p style="font-size: 10px; text-align: center"> Credit: http://www.commonapp.org/files/styles/323-193/public/default_images/logo_default_gray_0.jpg?itok=7LuT8nMn </p>
+
+</body>
+
+
+<script>
+	   
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+
+
+
+</script>
+
+</html>
